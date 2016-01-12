@@ -1,5 +1,6 @@
 package com.tbvanderleystudios.tyfacts;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         // Assign the View from the layout file to the corresponding variables
         mFunFactTextView = (TextView) findViewById(R.id.funFactTextView);
         mNewFactButton = (Button) findViewById(R.id.newFactButton);
+        mRelativeLayout = (RelativeLayout) findViewById(R.id.funFactRelativeLayout);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -33,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
                 // Update the screen with our dynamic fact
                 mFunFactTextView.setText(fact);
+
+                // Change the color of the RelativeLayout background and Button text
+                mRelativeLayout.setBackgroundColor(Color.RED);
+                mNewFactButton.setTextColor(Color.RED);
             }
         };
         mNewFactButton.setOnClickListener(listener);
