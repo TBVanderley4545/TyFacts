@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class ColorBook {
     // Fields
-    private String[] mColors = {"#39add1", // light blue
+    String[] mColors = {"#39add1", // light blue
             "#3079ab", // dark blue
             "#c25975", // mauve
             "#e15258", // red
